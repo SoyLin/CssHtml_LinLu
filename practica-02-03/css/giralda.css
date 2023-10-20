@@ -1,0 +1,47 @@
+/*importar fuente de letra, darle un nombre y enlazar con el archivo local*/
+@font-face {
+    font-family: Coldbringer;
+    src: url(Coldbringer.ttf);
+}
+#campanas > div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+#veleta p~p{
+    /*llamamos al font que hemos importado*/
+    font-family: Coldbringer;
+}
+
+@media screen and (max-width: 500px) {
+    #campanas > div{
+        font-size: 9px;
+        color: brown;
+    }
+    #veleta p~p{
+        font-size: 10px;
+        /*granate*/
+        color: maroon;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width:1000px) {
+    #campanas > div{
+        font-size: 10px;
+        color: gray;
+    }
+    #veleta p~p{
+        font-size: 11px;
+        color: pink;
+    }
+}
+
+@media screen and (min-width:1001px) {
+    #campanas > div{
+        font-size: 11px;
+        color: coral;
+    }
+    #veleta p~p{
+        font-size: 12px;
+        color: #d85e20;
+    }
+}

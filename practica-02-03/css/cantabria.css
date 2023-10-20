@@ -1,0 +1,97 @@
+h3[title]{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #948b0e;
+}
+.historia{
+    font-family: "Century", sans-serif;
+    color: #cbe68d;
+}
+
+/*~ si la etiqueta contiene esta palabra como PALABRA COMPLETA 
+separada con otros carácteres con espacio*/
+[class~="cantabra"] {
+    font-family: "Corbel", sans-serif;
+    color: #54B3B6;
+}
+
+/* ^ si la etiqueta empieza con esta palabra*/
+[title^="Cantabra"] {
+    font-family: Georgia, serif;
+    color: #751A7C;
+}
+
+/*$ si el nombre de la etiqueta acaba con esta palabra*/
+[title$="loco"] {
+    font-family: Latha, sans-serif;
+    color: #273CDD;
+}
+
+/*si la etiqueta contiene estos string sea palabra completa o NO*/
+[title*="conquista"]{
+    font-family:"Calibri", sans-serif;
+    color: #910d1f;
+}
+
+.reconquista::first-letter {
+    font-size: 300%;
+    color: #CDB3DD;
+}
+
+.cantabria::first-line{
+    color: #d5d21b;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 450px) {
+    .historia{
+        font-size: 9px;
+    }
+    [class~="cantabra"] {
+        font-size: 10px;
+    }
+    [title^="Cantabra"] {
+        font-size: 11px;
+    }
+    [title$="loco"] {
+        font-size: 12px;
+    }
+    [title*="conquista"]{
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 451px) and (max-width:900px) {
+    .historia{
+        font-size: 10px;
+    }
+    [class~="cantabra"] {
+        font-size: 11px;
+    }
+    [title^="Cantabra"] {
+        font-size: 12px;
+    }
+    [title$="loco"] {
+        font-size: 12px;
+    }
+    [title*="conquista"]{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:901) {
+    .historia{
+        font-size: 11px;
+    }
+    [class~="cantabra"] {
+        font-size: 12px;
+    }
+    [title^="Cantabra"] {
+        font-size: 13px;
+    }
+    [title$="loco"] {
+        font-size: 13px;
+    }
+    [title*="conquista"]{
+        font-size: 12px;
+    }
+}

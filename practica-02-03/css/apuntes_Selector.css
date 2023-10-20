@@ -1,0 +1,99 @@
+/*SELECTOR ATRIBUTO*/
+h3[title]{
+    
+}
+
+/*SELECTOR ID*/
+#historia {
+
+}
+
+/*SELECTOR MISMO NIVEL */
+/*todos los p después de h3  que están en el mismo nivel*/
+h3~p{
+   
+}
+
+/*SELECTOR MISMO NIVEL */
+/*SOLO el primer p después de h3  que están en el mismo nivel*/
+h3+p{
+}
+
+/*SELECTOR NIVEL INFERIOR*/
+/*div que está dentro de #campanas*/
+#campanas > div{
+    
+}
+
+/* SELECTOR CLASE QUE CONTIENE UNA PALABRA EN CONCRETA*/
+    /* ~ buscar en las etiquetas que contenga esa palabra como PALABRA COMPLETA
+    que es una palabra independiente -> está separada con otras por espacios*/
+    [class~="cantabra"] {
+        font-family: "Corbel", sans-serif;
+        color: #54B3B6;
+    }
+
+    /* ^ buscar en las etiquetas que EMPIEZA con esa palabra*/
+    [title^="Cantabra"] {
+        font-family: Georgia, serif;
+        color: #751A7C;
+    }
+
+    /*$ buscar en las etiquetas cuyos nombres acaban con esta palabra*/
+    [title$="loco"] {
+        font-family: Latha, sans-serif;
+        color: #273CDD;
+    }
+
+    /*buscar en las etiquetas que contiene estos caŕacteres sea palabra completa o NO
+    búsqueda general*/
+    [title*="conquista"]{
+        font-family:"Calibri", sans-serif;
+        color: #910d1f;
+    }
+
+/*1ª letra del 1º elemento*/
+/*es pseudo-clase doble(:)*/
+.reconquista::first-letter {
+
+}
+.reconquista:first-letter {
+}
+ 
+/*1ª letra mayúcula de las palabras*/
+ p{
+    text-transform: capitalize;
+}
+
+
+/*IMPORTAR FONT*/
+@font-face {
+    font-family: PonerNombreFOnt;
+    src: url(archivolocal);
+}
+p{
+    /*llamamos al font que hemos importado*/
+    font-family: PonerNombreFOnt;
+}
+
+/*ESTABLECER REGLAS DEPENDIENDO DE LA RESOLUCIÓN*/
+@media screen and (max-width: 500px) {
+    #campanas > div{
+        font-size: 9px;
+        color: brown;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width:1000px) {
+    #campanas > div{
+        font-size: 10px;
+        color: gray;
+    }
+}
+
+@media screen and (min-width:1001px) {
+    #campanas > div{
+        font-size: 11px;
+        color: coral;
+    }
+}
